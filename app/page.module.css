@@ -1,0 +1,2812 @@
+.page {
+  --ink: #172820;
+  --muted: #718078;
+  --green: #174d3d;
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 5%, #fff1c8 0, transparent 28%), #f5f4ed;
+  color: var(--ink);
+}
+
+.header,
+.main,
+.footer {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.header {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe3d9;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brandMark {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--green);
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+.brand small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.connection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #57685e;
+  font-size: 12px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c68b3b;
+}
+
+.online {
+  background: #27996e;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 430px);
+  align-items: center;
+  gap: clamp(32px, 7vw, 92px);
+  padding-top: 60px;
+  padding-bottom: 72px;
+}
+
+.hero {
+  padding-bottom: 20px;
+}
+
+.eyebrow,
+.sectionLabel {
+  color: #61806c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.title {
+  margin: 22px 0;
+  font-size: clamp(34px, 4.5vw, 57px);
+  line-height: 1.45;
+  letter-spacing: -1.5px;
+}
+
+.title span {
+  color: var(--green);
+}
+
+.description {
+  color: #627067;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.tileRow {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.tile {
+  width: 82px;
+  height: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid #dfe2d9;
+  border-radius: 12px;
+  box-shadow: 0 6px 0 #e4e3d9;
+}
+
+.tile span {
+  font-size: 42px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.tile small {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.tileBlue {
+  color: #326db3;
+  transform: rotate(-7deg);
+}
+
+.tileYellow {
+  color: #a77b13;
+  transform: translateY(-8px);
+  background: #fff9d9;
+}
+
+.tileRed {
+  color: #bd514a;
+  transform: rotate(7deg);
+}
+
+.heroNote {
+  margin-top: 30px;
+  color: #7b867e;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.panelStack {
+  display: grid;
+  gap: 15px;
+}
+
+.card {
+  padding: 23px;
+  border: 1px solid #e0e4da;
+  border-radius: 19px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 30px rgba(30, 55, 39, 0.045);
+}
+
+.sectionLabel {
+  margin: 0 0 14px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: #526157;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #dbe1d8;
+  border-radius: 9px;
+  background: #fbfcf9;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #54866d;
+  box-shadow: 0 0 0 3px rgba(84, 134, 109, 0.12);
+}
+
+.input::placeholder {
+  color: #9da69e;
+}
+
+.cardHeading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 37px;
+  height: 37px;
+  border-radius: 10px;
+  background: #edf4eb;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.cardHeading h2,
+.lobbyTitle {
+  margin: 0;
+  font-size: 17px;
+}
+
+.cardHeading p,
+.lobbyDescription {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.primaryButton,
+.secondaryButton,
+.startButton {
+  width: 100%;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 11px 15px;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.primaryButton,
+.startButton {
+  border: 1px solid var(--green);
+  background: var(--green);
+  color: white;
+}
+
+.primaryButton span,
+.startButton span {
+  font-size: 18px;
+}
+
+.primaryButton:hover:not(:disabled),
+.startButton:hover:not(:disabled) {
+  background: #22684f;
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  margin-top: 12px;
+  border: 1px solid #cfd9ce;
+  background: #f5f8f2;
+  color: var(--green);
+}
+
+.secondaryButton:hover:not(:disabled) {
+  background: #eaf1e7;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.startButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.codeInput {
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.notice {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #e5dcc0;
+  border-radius: 9px;
+  background: #fff9e8;
+  color: #745c2b;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* Lobby / ready-state screen */
+.lobbyScreen,
+.gameScreen {
+  grid-column: 1 / -1;
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.lobbyIntro {
+  margin-bottom: 25px;
+}
+
+.lobbyIntro .gameTitle {
+  margin-bottom: 12px;
+}
+
+.codeBox {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 21px;
+  border: 1px dashed #b9caba;
+  border-radius: 13px;
+  background: #f3f7ef;
+  text-align: center;
+}
+
+.codeBox > span {
+  color: #708271;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.codeBox strong {
+  font-size: clamp(26px, 4vw, 34px);
+  letter-spacing: 5px;
+  overflow-wrap: anywhere;
+}
+
+.playerCount {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 24px 0 12px;
+}
+
+.playerCount strong {
+  font-size: 21px;
+}
+
+.playerCount span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.playerList {
+  display: grid;
+  gap: 9px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.playerItem {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e7eae2;
+  border-radius: 10px;
+}
+
+.playerNumber {
+  color: #879288;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.playerName {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hostBadge,
+.youBadge {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 3px 5px;
+  border-radius: 4px;
+  background: #eaf2e8;
+  color: #366449;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+
+.youBadge {
+  background: #e9effb;
+  color: #345d99;
+}
+
+.readyBadge,
+.notReadyBadge {
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.readyBadge {
+  background: #e5f5e9;
+  color: #21653d;
+}
+
+.notReadyBadge {
+  background: #f1f1ec;
+  color: #70796f;
+}
+
+.emptyPlayer {
+  color: #929c93;
+  font-size: 12px;
+}
+
+.readyPanel {
+  margin-top: 21px;
+  padding: 17px;
+  border: 1px solid #e4e9df;
+  border-radius: 12px;
+  background: #fafbf7;
+}
+
+.readyHint,
+.hostWait {
+  margin: 0 0 13px;
+  color: #627067;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.startButton {
+  margin-top: 12px;
+}
+
+.hostWait {
+  margin: 14px 0 0;
+  text-align: center;
+}
+
+.textButton {
+  display: block;
+  margin: 16px auto 0;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: #69766c;
+  font: inherit;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Initial game screen */
+.gameTopline {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.gameTitle {
+  margin: 8px 0 0;
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.4;
+  letter-spacing: -0.8px;
+}
+
+.gameRoomCode {
+  flex: 0 0 auto;
+  display: grid;
+  gap: 5px;
+  padding: 11px 14px;
+  border: 1px solid #e0e4da;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.gameRoomCode span {
+  color: #708271;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.gameRoomCode strong {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.gameCard {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid #e0e4da;
+  border-radius: 19px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 30px rgba(30, 55, 39, 0.045);
+}
+
+.gameCard h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.gameSectionHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.gameSectionHeading .sectionLabel {
+  margin-bottom: 8px;
+}
+
+.tileCount {
+  padding: 6px 8px;
+  border-radius: 5px;
+  background: #edf4eb;
+  color: #477056;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.gameHelp {
+  margin: 10px 0 20px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.handTiles {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(7px, 2vw, 14px);
+}
+
+.numberTile {
+  position: relative;
+  min-width: 0;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid #e0e3db;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 0 #e2e1d8;
+}
+
+.numberTile strong {
+  font-size: clamp(32px, 5vw, 47px);
+  line-height: 1;
+}
+
+.numberTile small {
+  font-size: clamp(7px, 1.2vw, 9px);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.tileIndex {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  color: #a0a79f;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.numberTile.tileRed {
+  background: #fff5f3;
+  color: #bd514a;
+  border-color: #efd8d3;
+}
+
+.numberTile.tileBlue {
+  background: #f1f6ff;
+  color: #326db3;
+  border-color: #d8e2f4;
+}
+
+.numberTile.tileYellow {
+  background: #fff9d9;
+  color: #a77b13;
+  border-color: #eee2aa;
+}
+
+.gameLowerGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.hiddenTiles {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.hiddenTile {
+  aspect-ratio: 0.72;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c9d5c8;
+  border-radius: 7px;
+  background: repeating-linear-gradient(135deg, #e5ece2, #e5ece2 5px, #dce5d9 5px, #dce5d9 10px);
+  color: #64816b;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.mutedNote {
+  margin: 12px 0 0;
+  color: #758077;
+  font-size: 11px;
+}
+
+.gamePlayerList {
+  display: grid;
+  gap: 9px;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+}
+
+.gamePlayer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #e7eae2;
+  border-radius: 9px;
+}
+
+.playerAvatar {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #edf4eb;
+  color: #315c45;
+  font-weight: 800;
+}
+
+.nextFeature {
+  margin: 15px 0;
+  padding: 17px 19px;
+  border-left: 3px solid #91ad8e;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.nextFeature strong {
+  font-size: 13px;
+}
+
+.nextFeature p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.footer {
+  padding: 18px 0 24px;
+  border-top: 1px solid #dfe3d9;
+  color: #869087;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .header,
+  .main,
+  .footer {
+    width: min(100% - 32px, 560px);
+  }
+
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+    padding-top: 42px;
+    padding-bottom: 45px;
+  }
+
+  .hero {
+    padding-bottom: 0;
+  }
+
+  .title {
+    font-size: clamp(34px, 8vw, 48px);
+  }
+
+  .tile {
+    width: 69px;
+    height: 95px;
+  }
+
+  .tile span {
+    font-size: 35px;
+  }
+
+  .gameLowerGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .numberTile {
+    min-height: 125px;
+  }
+}
+
+@media (max-width: 430px) {
+  .header,
+  .main,
+  .footer {
+    width: calc(100% - 24px);
+  }
+
+  .card,
+  .gameCard {
+    padding: 17px;
+  }
+
+  .brand strong {
+    font-size: 14px;
+  }
+
+  .connection {
+    font-size: 10px;
+  }
+
+  .gameTopline {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .numberTile {
+    min-height: 112px;
+    border-radius: 9px;
+  }
+
+  .numberTile strong {
+    font-size: 31px;
+  }
+
+  .numberTile small {
+    letter-spacing: 0;
+    font-size: 7px;
+  }
+
+  .tileIndex {
+    top: 6px;
+    left: 6px;
+  }
+
+  .playerRole {
+    display: none;
+  }
+}
+
+/* Gameplay: turn state and question actions */
+.turnBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+  padding: 17px 20px;
+  border: 1px solid #dfe4db;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.myTurnBanner {
+  border-color: #a6c7a9;
+  background: #eef7eb;
+  box-shadow: inset 4px 0 0 #397b54;
+}
+
+.turnBanner strong {
+  font-size: 15px;
+}
+
+.turnBanner p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.activeCount {
+  flex: 0 0 auto;
+  padding: 7px 9px;
+  border-radius: 6px;
+  background: #f0f1eb;
+  color: #5c6c60;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.playerStatus {
+  flex: 0 0 auto;
+  color: #6c786e;
+  font-size: 10px;
+  text-align: right;
+}
+
+.questionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.questionButton {
+  min-width: 0;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #dfe5da;
+  border-radius: 12px;
+  background: #fcfdf9;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+}
+
+.questionButton strong {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.askQuestionButton,
+.choiceButton {
+  border: 1px solid #cbd8ca;
+  border-radius: 7px;
+  background: #f2f7ef;
+  color: #28563e;
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease;
+}
+
+.askQuestionButton:hover:not(:disabled),
+.choiceButton:hover:not(:disabled) {
+  background: #e5f0e2;
+  border-color: #89a990;
+}
+
+.askQuestionButton:disabled,
+.choiceButton:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.choiceButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.questionNumber {
+  color: #66816c;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.sharedTag,
+.othersTag,
+.questionTag,
+.correctBadge,
+.incorrectBadge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 7px;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.sharedTag {
+  background: #fdf2d7;
+  color: #886619;
+}
+
+.othersTag,
+.questionTag {
+  background: #edf2e9;
+  color: #4e7056;
+}
+
+.correctBadge {
+  background: #e0f3e5;
+  color: #21653d;
+}
+
+.incorrectBadge {
+  background: #f9e6e1;
+  color: #9c453b;
+}
+
+.emptyQuestions {
+  padding: 14px 15px;
+  border-radius: 9px;
+  background: #f5f6f0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.guessGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.guessField {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+}
+
+.guessField span {
+  color: #647267;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.guessField select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 7px;
+  border: 1px solid #dbe1d8;
+  border-radius: 8px;
+  background: #fbfcf9;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+}
+
+.guessActions {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.guessActions .secondaryButton,
+.guessActions .primaryButton {
+  margin-top: 0;
+}
+
+.historyList {
+  display: grid;
+  gap: 11px;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+}
+
+.historyItem {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e4e8df;
+  border-radius: 11px;
+  background: #fcfdf9;
+}
+
+.historyTopline {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.historyTopline > strong {
+  flex: 1;
+  min-width: 60px;
+  font-size: 12px;
+}
+
+.historyTurn {
+  color: #879288;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.historyText {
+  margin: 10px 0 0;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.7;
+}
+
+.responseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 11px;
+}
+
+.responseItem {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f0f3ec;
+  font-size: 11px;
+}
+
+.responseItem span {
+  overflow-wrap: anywhere;
+  color: #647267;
+}
+
+.responseItem strong {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* Result screen */
+.resultHero {
+  margin-bottom: 23px;
+}
+
+.resultList {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.resultItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid #e3e7df;
+  border-radius: 10px;
+  background: #fcfdf9;
+}
+
+.resultPlace {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #edf0e9;
+  color: #56665a;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.firstPlace {
+  background: #f9edc7;
+  color: #8b6a17;
+}
+
+.resultPlayerName {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+@media (max-width: 600px) {
+  .turnBanner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .questionGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .guessGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .guessField:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .responseGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .playerStatus {
+    max-width: 105px;
+  }
+}
+
+/* All hands are revealed on the result screen only. */
+.revealedHands {
+  display: grid;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.revealedHand {
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #e3e7df;
+  border-radius: 12px;
+  background: #fcfdf9;
+}
+
+.revealedHandHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.revealedHandHeading h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.revealedHandRank {
+  color: #68776c;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.revealedHand .numberTile {
+  min-height: 105px;
+}
+
+@media (max-width: 600px) {
+  .revealedHand {
+    padding: 10px;
+  }
+
+  .revealedHand .numberTile {
+    min-height: 85px;
+  }
+}
+
+/* Host-controlled navigation after the result screen */
+.resultActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.resultActions .secondaryButton {
+  margin-top: 0;
+}
+
+.waitForHost {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-top: 16px;
+  padding: 17px;
+  border: 1px solid #dfe5da;
+  border-radius: 12px;
+  background: #f7f9f4;
+}
+
+.waitForHost h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.waitForHost .gameHelp {
+  margin-bottom: 0;
+}
+
+.waitForHostDot {
+  flex: 0 0 10px;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #c68b3b;
+  box-shadow: 0 0 0 4px #f7edda;
+}
+
+@media (max-width: 600px) {
+  .resultActions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+
+/* Full-screen, premium tabletop play view */
+.pageGame {
+  --board-ink: #f4f1e8;
+  --board-muted: #a5b1a7;
+  --board-green: #244f3d;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  background: #111a16;
+  color: var(--board-ink);
+}
+.pageGame .header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 54px;
+  min-height: 54px;
+  padding: 0 22px;
+  border-bottom: 1px solid rgba(255,255,255,.09);
+  background: #111a16;
+}
+.pageGame .brandMark { width: 33px; height: 33px; border-radius: 9px; font-size: 18px; }
+.pageGame .brand strong { font-size: 13px; letter-spacing: 2.5px; color: #f5f4ec; }
+.pageGame .brand small { font-size: 8px; letter-spacing: 1.8px; color: #9aa99d; }
+.pageGame .connection { color: #b6c3b9; }
+.pageGame .mainGame {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: calc(100dvh - 54px);
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.pageGame .footer { display: none; }
+.gameWorkspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+.gamePlayPanel {
+  position: relative;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 38px 54px 105px 47px 92px minmax(178px, 1fr) 34px;
+  gap: 8px;
+  min-width: 0;
+  min-height: 0;
+  padding: 13px 15px 11px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 48% 28%, rgba(38, 86, 62, .25), transparent 62%),
+    linear-gradient(145deg, #17251e, #101814 72%);
+  border-right: 1px solid rgba(255,255,255,.1);
+}
+.boardHeader,
+.boardHeaderMeta,
+.boardBrand,
+.compactTurnBanner,
+.tableTilesRow,
+.playersRail,
+.playerRailItem,
+.tableSectionTitle,
+.questionDockHeader,
+.compactQuestionTop,
+.compactQuestionActions,
+.boardBottomBar,
+.memoHeader,
+.memoBrand,
+.memoTitleRow,
+.memoTabs,
+.memoSectionHeading,
+.memoHandLabel,
+.memoHandRows,
+.memoHandRow,
+.memoSlots,
+.memoFooter,
+.exchangeQuestionMeta,
+.exchangeQuestionText,
+.exchangeQuestionFooter,
+.exchangeAnswer {
+  display: flex;
+  align-items: center;
+}
+.boardHeader { justify-content: space-between; min-width: 0; }
+.boardBrand { gap: 9px; min-width: 0; }
+.boardMark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: 9px;
+  color: #f5f0df;
+  background: linear-gradient(145deg, #bd9b57, #806837);
+  box-shadow: inset 0 1px rgba(255,255,255,.25), 0 4px 12px rgba(0,0,0,.18);
+  font-weight: 900;
+  font-size: 18px;
+}
+.boardBrand strong, .boardBrand small { display: block; }
+.boardBrand strong { font-size: 12px; letter-spacing: 2px; }
+.boardBrand small { margin-top: 2px; color: #aab7aa; font-size: 7px; letter-spacing: 1.6px; }
+.boardHeaderMeta { justify-content: flex-end; gap: 7px; min-width: 0; }
+.turnPill, .roomPill {
+  padding: 6px 8px;
+  border: 1px solid rgba(224,214,180,.19);
+  border-radius: 6px;
+  color: #dfd8c5;
+  background: rgba(255,255,255,.035);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.roomPill { color: #aebbb0; }
+.boardExit { border: 0; padding: 6px 5px; color: #a8b3a9; background: transparent; font-size: 10px; cursor: pointer; }
+.boardExit:hover { color: #fff; }
+.compactTurnBanner {
+  min-width: 0;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid rgba(220,221,199,.11);
+  border-radius: 10px;
+  background: rgba(255,255,255,.045);
+}
+.compactMyTurn { border-color: rgba(218,184,105,.53); background: linear-gradient(90deg, rgba(125,96,43,.28), rgba(255,255,255,.035)); }
+.turnPulse { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: #a9b7aa; box-shadow: 0 0 0 4px rgba(169,183,170,.1); }
+.compactMyTurn .turnPulse { background: #e7c879; box-shadow: 0 0 0 4px rgba(231,200,121,.12); animation: turnPulse 1.8s ease-in-out infinite; }
+.compactTurnCopy { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 3px; }
+.compactTurnCopy strong { color: #f3eee0; font-size: 12px; }
+.compactTurnCopy span { overflow: hidden; color: #a7b5a9; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.activeCountCompact { color: #c3cbb9; font-size: 8px; font-weight: 800; letter-spacing: .9px; white-space: nowrap; }
+.tableTilesRow { min-width: 0; gap: 9px; }
+.handTablePanel, .centerTablePanel { box-sizing: border-box; height: 100%; min-width: 0; padding: 8px 10px; border: 1px solid rgba(236,230,208,.1); border-radius: 10px; background: rgba(255,255,255,.035); }
+.handTablePanel { flex: 1.15; }
+.centerTablePanel { flex: 1; }
+.tableSectionTitle { justify-content: space-between; gap: 8px; margin-bottom: 7px; white-space: nowrap; }
+.tableSectionTitle span { color: #b49b60; font-size: 7px; font-weight: 800; letter-spacing: 1.3px; }
+.tableSectionTitle strong { overflow: hidden; color: #d3d9cc; font-size: 9px; font-weight: 600; text-overflow: ellipsis; }
+.compactHandTiles, .compactHiddenTiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; height: 61px; }
+.compactNumberTile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 6px;
+  color: #fffdf4;
+  box-shadow: 0 3px 0 rgba(0,0,0,.24), inset 0 1px rgba(255,255,255,.48);
+}
+.compactNumberTile > span { position: absolute; top: 3px; left: 5px; font-size: 7px; opacity: .65; }
+.compactNumberTile strong { font-family: Georgia, serif; font-size: clamp(20px, 2.1vw, 30px); line-height: 1; text-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.tileRed.compactNumberTile { background: linear-gradient(145deg, #ca645e, #8e3739); color: #fff8f0; }
+.tileBlue.compactNumberTile { background: linear-gradient(145deg, #6798c1, #315b84); color: #f4f8ff; }
+.tileYellow.compactNumberTile { background: linear-gradient(145deg, #f1db8c, #c29a43); color: #4e3b15; border-color: #fff1b7; }
+.compactHiddenTile { display: grid; place-items: center; min-width: 0; border: 1px solid rgba(214,190,129,.47); border-radius: 6px; color: #c9b16f; background: repeating-linear-gradient(135deg, #273b31, #273b31 4px, #1d3027 4px, #1d3027 8px); box-shadow: inset 0 0 0 2px rgba(0,0,0,.12); }
+.compactHiddenTile span { display: grid; place-items: center; width: 23px; height: 23px; border: 1px solid rgba(211,188,127,.45); border-radius: 50%; font-family: Georgia, serif; font-size: 14px; }
+.playersRail { min-width: 0; gap: 7px; }
+.playerRailItem { position: relative; flex: 1; min-width: 0; gap: 6px; padding: 6px 7px; border: 1px solid rgba(255,255,255,.075); border-radius: 8px; background: rgba(255,255,255,.025); }
+.playerRailActive { border-color: rgba(220,190,115,.55); background: rgba(185,150,77,.11); }
+.playerRailIndex { align-self: flex-start; color: #77877a; font-size: 7px; }
+.playerRailAvatar { display: grid; place-items: center; width: 26px; height: 26px; flex: 0 0 26px; border-radius: 8px; color: #efe7cf; background: #334a3b; font-size: 11px; font-weight: 800; }
+.playerRailText { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.playerRailText strong { overflow: hidden; color: #e0e6dc; font-size: 9px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.playerRailText small { overflow: hidden; color: #96a79a; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.hostMini { position: absolute; top: 2px; right: 4px; color: #d7bc78; font-size: 6px; letter-spacing: .5px; }
+.exchangePanel { min-width: 0; min-height: 0; overflow: hidden; border: 1px solid rgba(219,194,130,.17); border-radius: 10px; background: linear-gradient(110deg, rgba(45,65,51,.8), rgba(24,36,29,.88)); }
+.exchangeContent { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 9px; height: 100%; padding: 7px; box-sizing: border-box; }
+.exchangeQuestionCard { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: 8px 10px; border: 1px solid rgba(221,198,137,.25); border-radius: 7px; background: linear-gradient(145deg, rgba(194,157,82,.13), rgba(255,255,255,.035)); animation: questionReveal 650ms cubic-bezier(.18,.75,.22,1) both; }
+.exchangeQuestionMeta { justify-content: space-between; gap: 8px; color: #baa66f; font-size: 7px; font-weight: 800; letter-spacing: 1px; }
+.exchangeQuestionText { gap: 7px; margin: 7px 0; min-width: 0; }
+.exchangeGem { color: #e2c36c; font-size: 14px; }
+.exchangeQuestionText strong { color: #f4f0e3; font-size: 11px; line-height: 1.5; }
+.exchangeQuestionFooter { justify-content: space-between; gap: 4px; color: #a8b6a6; font-size: 7px; }
+.exchangeQuestionFooter span:last-child { color: #d9c68d; }
+.exchangeAnswers { display: flex; flex-direction: column; justify-content: center; gap: 5px; min-width: 0; }
+.exchangeAnswer { min-width: 0; gap: 7px; padding: 7px 8px; border: 1px solid rgba(255,255,255,.07); border-radius: 6px; background: rgba(255,255,255,.045); opacity: 0; animation: answerReveal 520ms ease-out forwards; }
+.exchangeAnswer:nth-child(1) { animation-delay: 450ms; }
+.exchangeAnswer:nth-child(2) { animation-delay: 950ms; }
+.exchangeAnswer:nth-child(3) { animation-delay: 1450ms; }
+.answerOrder { display: grid; place-items: center; width: 18px; height: 18px; flex: 0 0 18px; border-radius: 5px; color: #d9c17a; background: rgba(208,180,107,.12); font-size: 7px; }
+.answerPlayer { overflow: hidden; flex: 1; min-width: 0; color: #bac6b7; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.exchangeAnswer strong { color: #f6ebc9; font-size: 10px; text-align: right; overflow-wrap: anywhere; }
+.exchangeWaiting { display: flex; align-items: center; gap: 11px; height: 100%; padding: 0 15px; }
+.exchangeWaitingIcon { display: grid; place-items: center; width: 31px; height: 31px; border: 1px solid rgba(219,194,130,.24); border-radius: 9px; color: #d5b963; background: rgba(219,194,130,.08); }
+.exchangeWaiting div { display: flex; flex-direction: column; gap: 4px; }
+.exchangeWaiting strong { color: #e4e9df; font-size: 10px; }
+.exchangeWaiting small { color: #99a899; font-size: 8px; }
+.questionDock { display: flex; flex-direction: column; min-width: 0; min-height: 0; gap: 7px; }
+.questionDockHeader { justify-content: space-between; min-height: 25px; }
+.questionDockHeader > div { display: flex; flex-direction: column; gap: 2px; }
+.questionDockEyebrow { color: #bca36a; font-size: 7px; font-weight: 800; letter-spacing: 1.5px; }
+.questionDockHeader strong { color: #f1eee3; font-size: 12px; }
+.questionRemaining { color: #8e9e90; font-size: 8px; letter-spacing: 1px; white-space: nowrap; }
+.compactQuestionGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); gap: 6px; min-height: 0; flex: 1; }
+.compactQuestionCard { display: flex; flex-direction: column; justify-content: space-between; min-width: 0; min-height: 0; padding: 7px 9px 6px; border: 1px solid rgba(230,226,207,.105); border-radius: 8px; background: linear-gradient(135deg, rgba(255,255,255,.065), rgba(255,255,255,.025)); transition: border-color 150ms ease, background 150ms ease, transform 150ms ease; }
+.compactQuestionCard:hover { border-color: rgba(224,195,119,.3); }
+.compactSharedCard { border-color: rgba(195,170,103,.23); }
+.compactQuestionTop { justify-content: space-between; min-height: 10px; color: #b9a36d; font-size: 7px; font-weight: 800; letter-spacing: 1px; }
+.compactQuestionTop small { color: #e0c98b; font-size: 6px; letter-spacing: 1px; }
+.compactQuestionCard > strong { display: -webkit-box; overflow: hidden; color: #e6eade; font-size: 9px; font-weight: 550; line-height: 1.35; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.compactQuestionActions { gap: 5px; }
+.compactAskButton { display: flex; align-items: center; justify-content: center; flex: 1; min-width: 0; min-height: 23px; padding: 4px 5px; border: 1px solid rgba(201,181,124,.28); border-radius: 5px; color: #e8d8aa; background: rgba(192,161,86,.085); font: inherit; font-size: 8px; cursor: pointer; transition: background 120ms ease, border-color 120ms ease; }
+.compactAskButton span { margin-left: 4px; }
+.compactAskButton:hover:not(:disabled) { border-color: #c5a75e; background: rgba(192,161,86,.2); }
+.compactAskButton:disabled { color: #69786b; border-color: rgba(255,255,255,.05); background: rgba(255,255,255,.018); cursor: not-allowed; }
+.spectatorMessage { display: grid; place-items: center; flex: 1; min-height: 0; border: 1px dashed rgba(220,222,202,.16); border-radius: 9px; color: #b7c1b5; text-align: center; font-size: 10px; padding: 12px; }
+.boardBottomBar { justify-content: space-between; gap: 8px; min-width: 0; }
+.boardHint, .boardNotice { overflow: hidden; color: #809184; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.boardNotice { color: #ebc983; }
+.guessActionButton { display: flex; align-items: center; gap: 8px; min-height: 30px; flex: 0 0 auto; padding: 5px 11px; border: 1px solid #b99b55; border-radius: 7px; color: #261f12; background: linear-gradient(135deg, #e4ca84, #b8984d); font: inherit; font-size: 9px; font-weight: 800; cursor: pointer; }
+.guessActionButton:disabled { opacity: .42; cursor: not-allowed; }
+.guessActionButton span { font-size: 13px; }
+
+/* Reference-inspired private deduction memo on the right half */
+.memoPanel { box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; min-width: 0; min-height: 0; padding: 14px 18px 10px; overflow: hidden; color: #29382e; background: linear-gradient(180deg, #f5f2e8, #ece9dd); }
+.memoHeader { justify-content: space-between; gap: 10px; min-height: 36px; padding-bottom: 9px; border-bottom: 1px solid #d9d5c8; }
+.memoBrand { gap: 9px; min-width: 0; }
+.memoLogo { display: grid; place-items: center; width: 31px; height: 31px; flex: 0 0 31px; border-radius: 8px; color: #f8f4e5; background: #254e3c; font-family: Georgia, serif; font-weight: 800; }
+.memoBrand strong, .memoBrand small { display: block; }
+.memoBrand strong { color: #284434; font-size: 10px; letter-spacing: 1.7px; }
+.memoBrand small { margin-top: 3px; color: #8b9386; font-size: 7px; letter-spacing: 1px; }
+.memoClear { border: 1px solid #d4d0c1; border-radius: 6px; padding: 6px 9px; color: #6d7568; background: #fbfaf5; font: inherit; font-size: 9px; cursor: pointer; }
+.memoClear:hover { color: #8a3535; border-color: #cda5a0; }
+.memoTitleRow { justify-content: space-between; gap: 10px; }
+.memoTitleRow p { margin: 0 0 3px; color: #a38a4d; font-size: 7px; font-weight: 800; letter-spacing: 1.5px; }
+.memoTitleRow h2 { margin: 0; color: #243b2d; font-size: 21px; letter-spacing: -.5px; }
+.memoSaveState { display: inline-flex; align-items: center; gap: 5px; color: #7a8a78; font-size: 8px; white-space: nowrap; }
+.memoSaveState i { width: 6px; height: 6px; border-radius: 50%; background: #61956e; }
+.memoTabs { gap: 5px; padding: 3px; border: 1px solid #dcd8cb; border-radius: 8px; background: #e9e5d8; }
+.memoTab, .memoTabActive { flex: 1; min-width: 0; padding: 7px 5px; border: 0; border-radius: 6px; color: #808779; background: transparent; font: inherit; font-size: 9px; cursor: pointer; }
+.memoTabActive { color: #f4f0e3; background: #2c503e; box-shadow: 0 2px 5px rgba(32,56,39,.15); }
+.memoSection { display: flex; flex-direction: column; gap: 9px; min-height: 0; flex: 1; }
+.memoSectionHeading { justify-content: space-between; gap: 8px; }
+.memoSectionHeading strong { color: #344b39; font-size: 11px; }
+.memoSectionHeading span { color: #8c9385; font-size: 8px; }
+.memoTileGrid { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 5px; }
+.memoTile { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: 0; height: clamp(38px, 5.5vh, 54px); padding: 3px; border: 1px solid rgba(39,56,45,.12); border-radius: 7px; box-shadow: 0 2px 0 rgba(35,48,38,.13), inset 0 1px rgba(255,255,255,.5); cursor: pointer; transition: transform 120ms ease, opacity 120ms ease; }
+.memoTile:hover { transform: translateY(-2px); }
+.memoTile strong { font-family: Georgia, serif; font-size: clamp(15px, 1.5vw, 21px); line-height: 1; }
+.memoTile small { font-size: 7px; font-weight: 800; letter-spacing: .6px; }
+.memoTile.tileRed { color: #fff8f0; background: linear-gradient(145deg, #c96760, #a54442); }
+.memoTile.tileBlue { color: #f4f8ff; background: linear-gradient(145deg, #6d9ec4, #426e97); }
+.memoTile.tileYellow { color: #5d4719; background: linear-gradient(145deg, #f6e2a0, #d8b75e); }
+.memoTileCrossed { filter: grayscale(.55); opacity: .38; }
+.memoTileCrossed strong { text-decoration: line-through; }
+.crossMark { position: absolute; inset: 0; display: grid; place-items: center; color: #243329; font-size: 32px; font-weight: 900; text-shadow: 0 1px 0 rgba(255,255,255,.7); }
+.memoFootnote { margin: 0; color: #7d8678; font-size: 8px; line-height: 1.5; }
+.memoHandRows { display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.memoHandRow { display: flex; flex-direction: column; gap: 5px; padding: 8px 9px; border: 1px solid #dcd8ca; border-radius: 8px; background: rgba(255,255,255,.38); }
+.memoHandLabel { gap: 7px; min-width: 0; }
+.memoHandLabel span { display: grid; place-items: center; width: 17px; height: 17px; border-radius: 5px; color: #fff9e7; background: #56745b; font-size: 8px; font-weight: 800; }
+.memoHandLabel strong { overflow: hidden; color: #425543; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.memoSlots { gap: 6px; width: 100%; }
+.memoSlot { display: flex; align-items: center; gap: 4px; flex: 1; min-width: 0; padding: 5px; border: 1px solid #d9d9cc; border-radius: 6px; background: #fffdf5; }
+.memoSlot > small { color: #99a08e; font-size: 7px; }
+.memoSlot select { width: 100%; min-width: 0; border: 0; outline: 0; color: #394a3b; background: transparent; font: inherit; font-size: 8px; cursor: pointer; }
+.memoSlot.tileRed { background: #f7e9e5; border-color: #e1b6ae; }
+.memoSlot.tileBlue { background: #e9f0f6; border-color: #b9cddd; }
+.memoSlot.tileYellow { background: #f8f0d7; border-color: #dfd0a4; }
+.memoStatsGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+.memoStatField { display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: 7px 8px; border: 1px solid #dbd7c9; border-radius: 7px; background: rgba(255,255,255,.5); }
+.memoStatField span { overflow: hidden; color: #798272; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.memoStatField input { width: 100%; min-width: 0; box-sizing: border-box; padding: 2px 0; border: 0; outline: 0; color: #2c4735; background: transparent; font: inherit; font-size: 15px; font-weight: 750; }
+.memoNoteField { display: flex; flex-direction: column; gap: 5px; min-height: 0; flex: 1; }
+.memoNoteField span { color: #687763; font-size: 9px; font-weight: 700; }
+.memoNoteField textarea { box-sizing: border-box; width: 100%; min-height: 65px; flex: 1; resize: none; padding: 9px; border: 1px solid #d6d4c7; border-radius: 7px; outline: none; color: #314635; background: rgba(255,255,255,.55); font: inherit; font-size: 10px; line-height: 1.5; }
+.memoNoteField textarea:focus { border-color: #8ba48a; }
+.memoFooter { justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 7px; border-top: 1px solid #dad6c8; color: #9b9f91; font-size: 7px; letter-spacing: .8px; }
+
+.guessModalBackdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 20px; background: rgba(6,12,9,.76); backdrop-filter: blur(8px); animation: modalFade 180ms ease-out; }
+.guessModal { position: relative; box-sizing: border-box; width: min(640px, 100%); max-height: min(90dvh, 720px); overflow: auto; padding: 28px; border: 1px solid #d8c37c; border-radius: 18px; color: #203328; background: #f5f1e4; box-shadow: 0 24px 90px rgba(0,0,0,.35); }
+.guessModal h2 { margin: 8px 0; font-size: 25px; }
+.modalClose { position: absolute; top: 12px; right: 15px; width: 32px; height: 32px; border: 1px solid #ded8c8; border-radius: 8px; color: #657365; background: #fffdf6; font-size: 22px; cursor: pointer; }
+
+@keyframes questionReveal { from { opacity: 0; transform: translateY(12px) scale(.97); filter: brightness(1.5); } to { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); } }
+@keyframes answerReveal { from { opacity: 0; transform: translateX(14px); filter: brightness(1.8); } to { opacity: 1; transform: translateX(0); filter: brightness(1); } }
+@keyframes turnPulse { 0%,100% { box-shadow: 0 0 0 4px rgba(231,200,121,.1); } 50% { box-shadow: 0 0 0 7px rgba(231,200,121,.02); } }
+@keyframes modalFade { from { opacity: 0; } to { opacity: 1; } }
+
+@media (min-width: 1600px) and (min-height: 900px) {
+  .gamePlayPanel { padding: 17px 19px 14px; gap: 10px; grid-template-rows: 42px 58px 119px 51px 100px minmax(205px, 1fr) 38px; }
+  .compactHandTiles, .compactHiddenTiles { height: 69px; }
+  .compactQuestionCard { padding: 8px 11px 7px; }
+  .compactQuestionCard > strong { font-size: 10px; }
+  .compactAskButton { min-height: 25px; font-size: 9px; }
+  .memoPanel { padding: 18px 24px 13px; gap: 13px; }
+  .memoTile { height: clamp(42px, 5.6vh, 61px); }
+}
+@media (max-height: 800px) and (min-width: 901px) {
+  .gamePlayPanel { grid-template-rows: 32px 46px 89px 40px 78px minmax(160px, 1fr) 29px; gap: 5px; padding: 9px 11px 8px; }
+  .compactHandTiles, .compactHiddenTiles { height: 52px; gap: 4px; }
+  .handTablePanel, .centerTablePanel { padding: 6px 7px; }
+  .tableSectionTitle { margin-bottom: 5px; }
+  .tableSectionTitle strong { font-size: 8px; }
+  .compactTurnBanner { padding: 6px 9px; }
+  .compactTurnCopy strong { font-size: 10px; }
+  .compactTurnCopy span { font-size: 8px; }
+  .playersRail { gap: 5px; }
+  .playerRailItem { padding: 4px 5px; }
+  .playerRailAvatar { width: 22px; height: 22px; flex-basis: 22px; }
+  .exchangeContent { padding: 5px; gap: 6px; }
+  .exchangeQuestionCard { padding: 5px 7px; }
+  .exchangeQuestionText { margin: 4px 0; }
+  .exchangeQuestionText strong { font-size: 9px; }
+  .exchangeAnswer { padding: 4px 6px; gap: 5px; }
+  .answerPlayer { font-size: 8px; }
+  .exchangeAnswer strong { font-size: 9px; }
+  .compactQuestionGrid { gap: 4px; }
+  .compactQuestionCard { padding: 5px 7px 4px; }
+  .compactQuestionCard > strong { font-size: 8px; }
+  .compactAskButton { min-height: 19px; font-size: 7px; padding: 3px; }
+  .questionDock { gap: 4px; }
+  .memoPanel { padding: 10px 13px 7px; gap: 7px; }
+  .memoHeader { min-height: 29px; padding-bottom: 6px; }
+  .memoTitleRow h2 { font-size: 18px; }
+  .memoTile { height: 36px; }
+  .memoSection { gap: 6px; }
+  .memoHandRows { gap: 6px; }
+  .memoHandRow { gap: 4px; padding: 5px 7px; }
+  .memoSlots { gap: 4px; }
+  .memoSlot { padding: 3px; }
+  .memoStatsGrid { gap: 5px; }
+  .memoStatField { padding: 5px 6px; }
+  .memoNoteField textarea { min-height: 48px; }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .gamePlayPanel { padding-left: 9px; padding-right: 9px; grid-template-rows: 32px 46px 86px 38px 77px minmax(150px, 1fr) 29px; gap: 5px; }
+  .boardBrand strong { font-size: 10px; }
+  .boardHeaderMeta { gap: 4px; }
+  .turnPill, .roomPill { padding: 5px; font-size: 7px; }
+  .tableSectionTitle strong { font-size: 8px; }
+  .compactQuestionCard { padding: 5px 6px 4px; }
+  .compactQuestionCard > strong { font-size: 8px; }
+  .memoPanel { padding: 10px; gap: 7px; }
+  .memoTileGrid { gap: 3px; }
+  .memoTile { height: 35px; }
+}
+@media (max-width: 900px) {
+  .pageGame { height: auto; min-height: 100dvh; overflow: auto; }
+  .pageGame .header { padding: 0 12px; }
+  .pageGame .mainGame { height: auto; min-height: calc(100dvh - 54px); overflow: visible; }
+  .gameWorkspace { grid-template-columns: minmax(0, 1fr); height: auto; overflow: visible; }
+  .gamePlayPanel { min-height: 760px; grid-template-rows: 38px 54px 105px 47px 92px 300px 34px; overflow: visible; }
+  .memoPanel { min-height: 600px; overflow: visible; border-top: 2px solid #d5c48d; }
+  .memoTile { height: 44px; }
+  .pageGame .footer { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .exchangeQuestionCard, .exchangeAnswer, .turnPulse, .guessModalBackdrop { animation-duration: 1ms !important; animation-delay: 0ms !important; }
+}
+
+/* Keep the complete deduction sheet visible at once, like the reference memo. */
+.memoPanel { gap: 8px; }
+.memoBody { display: grid; grid-template-rows: auto auto minmax(0, 1fr); gap: 9px; min-width: 0; min-height: 0; flex: 1; }
+.memoBody > .memoSection { gap: 6px; min-height: 0; flex: initial; }
+.memoTileGrid { gap: 4px; }
+.memoTile { height: clamp(32px, 4.7vh, 46px); }
+.memoHandRows { gap: 5px; }
+.memoHandRow { flex-direction: row; align-items: center; gap: 8px; padding: 5px 6px; }
+.memoHandLabel { flex: 0 0 112px; min-width: 0; }
+.memoHandLabel strong { font-size: 8px; }
+.memoSlots { gap: 4px; }
+.memoSlot { padding: 4px; }
+.memoSlot select { font-size: 7px; }
+.memoStatsGrid { gap: 5px; }
+.memoStatField { padding: 5px 6px; gap: 2px; }
+.memoStatField span { font-size: 7px; }
+.memoStatField input { font-size: 12px; }
+.memoNoteField { min-height: 0; flex: initial; }
+.memoNoteField textarea { min-height: 32px; height: 38px; flex: initial; padding: 6px 8px; font-size: 9px; }
+.memoBody > .memoSection:last-child { min-height: 0; }
+.memoFooter { margin-top: 0; }
+@media (max-height: 800px) and (min-width: 901px) {
+  .memoPanel { gap: 5px; }
+  .memoBody { gap: 5px; }
+  .memoBody > .memoSection { gap: 4px; }
+  .memoTile { height: 29px; }
+  .memoTile strong { font-size: 15px; }
+  .memoHandRow { padding: 3px 5px; }
+  .memoHandLabel { flex-basis: 95px; }
+  .memoSlot { padding: 2px 3px; }
+  .memoStatField { padding: 3px 5px; }
+  .memoNoteField textarea { height: 31px; min-height: 31px; }
+}
+
+/* Desktop question cards retain a board-game card proportion on tall monitors. */
+@media (min-width: 901px) and (min-height: 801px) {
+  .compactQuestionGrid { grid-template-rows: repeat(3, 82px); flex: 0 0 auto; align-content: start; }
+  .questionDock { min-height: 0; }
+}
+/* Three shared answers must fit even in a short laptop viewport. */
+.exchangeAnswers { gap: 3px; }
+.exchangeAnswer { gap: 5px; padding: 2px 5px; }
+.answerOrder { width: 14px; height: 14px; flex-basis: 14px; font-size: 6px; }
+.answerPlayer { font-size: 8px; }
+.exchangeAnswer strong { font-size: 9px; }
+@media (max-height: 800px) and (min-width: 901px) {
+  .exchangeAnswers { gap: 2px; }
+  .exchangeAnswer { padding: 1px 4px; }
+  .answerOrder { width: 13px; height: 13px; flex-basis: 13px; }
+  .answerPlayer { font-size: 7px; }
+  .exchangeAnswer strong { font-size: 8px; }
+}
+
+/* Revised compact deduction memo: two opponents, aligned tile rows, and per-player sums. */
+.memoPanel {
+  gap: clamp(4px, .65vh, 8px);
+  padding: clamp(7px, 1.1vh, 13px) clamp(9px, 1.1vw, 17px) 6px;
+}
+.memoHeader {
+  min-height: 28px;
+  padding-bottom: 5px;
+  gap: 7px;
+}
+.memoLogo { width: 27px; height: 27px; flex-basis: 27px; }
+.memoBrand { gap: 7px; }
+.memoBrand strong { font-size: 9px; }
+.memoBrand small { font-size: 6px; }
+.memoClear { padding: 4px 7px; font-size: 8px; }
+.memoTitleRow { min-height: 29px; }
+.memoTitleRow h2 { font-size: 18px; }
+.memoTitleRow p { font-size: 6px; margin-bottom: 2px; }
+.memoSaveState { font-size: 7px; }
+.memoBody {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: clamp(4px, .55vh, 7px);
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.memoBody > .memoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  min-height: 0;
+  flex: initial;
+}
+.memoSectionHeading { min-height: 13px; gap: 5px; }
+.memoSectionHeading strong { font-size: 9px; line-height: 1.3; }
+.memoSectionHeading span { font-size: 6px; white-space: nowrap; }
+.memoTileGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.memoCandidateRow {
+  display: grid;
+  grid-template-columns: 22px repeat(10, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 3px;
+  min-width: 0;
+}
+.memoColorLabel {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: 800;
+}
+.memoColorLabel.tileRed { color: #fff8f0; background: #a54442; }
+.memoColorLabel.tileBlue { color: #f4f8ff; background: #426e97; }
+.memoColorLabel.tileYellow { color: #5d4719; background: #d8b75e; }
+.memoTileSpacer { display: block; min-width: 0; height: clamp(22px, 3.3vh, 32px); }
+.memoTile {
+  box-sizing: border-box;
+  height: clamp(22px, 3.3vh, 32px);
+  gap: 1px;
+  padding: 1px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(35,48,38,.11), inset 0 1px rgba(255,255,255,.5);
+}
+.memoTile strong { font-size: clamp(11px, 1vw, 15px); }
+.memoTile small { font-size: 6px; line-height: 1; }
+.crossMark { font-size: 21px; }
+.memoHandRows { gap: 4px; }
+.memoHandRow {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 5px;
+}
+.memoHandLabel { display: flex; align-items: center; flex: 0 0 clamp(72px, 8vw, 104px); gap: 5px; }
+.memoHandLabel span { width: 15px; height: 15px; flex: 0 0 15px; font-size: 7px; }
+.memoHandLabel strong { font-size: 8px; }
+.memoSlots { display: flex; flex: 1; gap: 3px; width: auto; }
+.memoSlot { padding: 2px 3px; gap: 2px; border-radius: 4px; }
+.memoSlot > small { font-size: 6px; }
+.memoSlot select { font-size: 7px; }
+.memoConditionsSection { overflow: hidden; }
+.memoConditionPlayers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 6px;
+  min-width: 0;
+  min-height: 0;
+}
+.memoConditionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 5px;
+  border: 1px solid #dcd8ca;
+  border-radius: 7px;
+  background: rgba(255,255,255,.42);
+}
+.memoConditionPlayerTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  color: #425543;
+}
+.memoConditionPlayerTitle span {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border-radius: 4px;
+  color: #fff9e7;
+  background: #56745b;
+  font-size: 7px;
+  font-weight: 800;
+}
+.memoConditionPlayerTitle strong {
+  overflow: hidden;
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.memoStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3px;
+}
+.memoStatField {
+  gap: 2px;
+  padding: 3px 4px;
+  border-radius: 4px;
+}
+.memoStatField span {
+  font-size: 6px;
+  line-height: 1.2;
+}
+.memoStatField input {
+  padding: 0;
+  font-size: 11px;
+  line-height: 1.15;
+}
+.memoSumsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3px;
+}
+.memoSumField {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 3px 4px;
+  border: 1px solid #dbd7c9;
+  border-radius: 4px;
+  background: rgba(255,255,255,.5);
+}
+.memoSumField span {
+  overflow: hidden;
+  color: #798272;
+  font-size: 6px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.memoSumField input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #2c4735;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 750;
+}
+.memoNoteField {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+.memoConditionsSection .memoNoteField textarea {
+  box-sizing: border-box;
+  flex: 1;
+  width: 100%;
+  height: auto;
+  min-height: 54px;
+  resize: none;
+  padding: 7px 8px;
+  border: 1px solid #d6d4c7;
+  border-radius: 6px;
+  outline: none;
+  color: #314635;
+  background: rgba(255,255,255,.55);
+  font: inherit;
+  font-size: 9px;
+  line-height: 1.4;
+}
+.memoConditionsSection .memoNoteField span { font-size: 8px; }
+.memoFootnote { font-size: 6px; line-height: 1.2; }
+.memoFooter { min-height: 13px; padding-top: 4px; font-size: 6px; }
+
+@media (max-height: 800px) and (min-width: 901px) {
+  .memoPanel { gap: 4px; padding-top: 6px; padding-bottom: 4px; }
+  .memoHeader { min-height: 24px; padding-bottom: 3px; }
+  .memoLogo { width: 23px; height: 23px; flex-basis: 23px; }
+  .memoTitleRow { min-height: 24px; }
+  .memoTitleRow h2 { font-size: 16px; }
+  .memoBody { gap: 3px; }
+  .memoBody > .memoSection { gap: 3px; }
+  .memoCandidateRow { gap: 2px; grid-template-columns: 20px repeat(10, minmax(0, 1fr)); }
+  .memoTile, .memoTileSpacer { height: 22px; }
+  .memoHandRow { padding: 2px 4px; }
+  .memoConditionCard { padding: 3px; gap: 3px; }
+  .memoStatField { padding: 2px 3px; }
+  .memoSumField { padding: 2px 3px; }
+  .memoConditionsSection .memoNoteField textarea { min-height: 42px; }
+  .memoFootnote { font-size: 5px; }
+}
+
+@media (min-width: 901px) and (min-height: 900px) {
+  .memoPanel { padding-top: 12px; gap: 7px; }
+  .memoTile, .memoTileSpacer { height: clamp(28px, 3.4vh, 38px); }
+  .memoConditionCard { padding: 7px; gap: 5px; }
+  .memoStatField { padding: 4px 5px; }
+  .memoConditionPlayerTitle strong { font-size: 9px; }
+  .memoSumField { padding: 4px 5px; }
+  .memoConditionsSection .memoNoteField textarea { min-height: 70px; font-size: 10px; }
+}
+
+@media (max-width: 900px) {
+  .memoPanel { min-height: 600px; overflow: visible; padding: 18px 20px; gap: 10px; }
+  .memoBody { display: flex; flex: initial; overflow: visible; gap: 12px; }
+  .memoBody > .memoSection { gap: 9px; }
+  .memoTile { height: 42px; }
+  .memoCandidateRow { grid-template-columns: 24px repeat(10, minmax(0, 1fr)); gap: 4px; }
+  .memoTileSpacer { height: 42px; }
+  .memoConditionCard { padding: 8px; gap: 6px; }
+  .memoStatsGrid { gap: 5px; }
+  .memoStatField { padding: 5px; }
+  .memoStatField span, .memoSumField span { font-size: 8px; }
+  .memoStatField input, .memoSumField input { font-size: 13px; }
+  .memoSumField { padding: 5px; }
+  .memoConditionsSection .memoNoteField textarea { min-height: 100px; flex: initial; }
+  .memoFootnote { font-size: 8px; }
+}
+
+/* Memo candidate tiles remain level; 5 is duplicated visually into the red/blue number rows. */
+.memoPanel .memoTile,
+.memoPanel .memoTile:hover,
+.memoPanel .memoTile.tileRed,
+.memoPanel .memoTile.tileBlue,
+.memoPanel .memoTile.tileYellow {
+  transform: none !important;
+}
+.memoPanel .memoTile:hover {
+  filter: brightness(1.04);
+}
+.memoCandidateRow .memoTile.tileYellow {
+  color: #5d4719;
+  background: linear-gradient(145deg, #f6e2a0, #d8b75e);
+  border-color: #c9ae5e;
+}
+
+/* Separate personal notes for each opponent while retaining the no-scroll desktop layout. */
+.memoNotesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(4px, .6vw, 8px);
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+.memoNotesGrid .memoNoteField {
+  flex: initial;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.memoNotesGrid .memoNoteField > span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.memoConditionsSection .memoNotesGrid .memoNoteField textarea {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  resize: none;
+}
+
+/* In-game music controls. The source file is public/audio/bgm.mp3. */
+.bgmControls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 2px 4px;
+  border: 1px solid rgba(224, 214, 180, .17);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, .035);
+}
+.bgmToggle {
+  display: grid;
+  place-items: center;
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid rgba(215, 190, 120, .38);
+  border-radius: 5px;
+  color: #e8d8aa;
+  background: rgba(192, 161, 86, .12);
+  font: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.bgmToggle:hover { background: rgba(192, 161, 86, .25); }
+.bgmUnavailable { color: #e8a39b; border-color: rgba(232, 163, 155, .5); }
+.bgmVolumeControl {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  color: #d8c58f;
+  font-size: 10px;
+}
+.bgmVolumeControl input {
+  display: block;
+  width: clamp(42px, 5.5vw, 70px);
+  height: 14px;
+  margin: 0;
+  accent-color: #d8bd70;
+  cursor: pointer;
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .bgmControls { gap: 3px; padding: 2px; }
+  .bgmVolumeControl { gap: 2px; }
+  .bgmVolumeControl input { width: 36px; }
+  .bgmToggle { width: 20px; height: 20px; flex-basis: 20px; }
+}
+@media (max-width: 900px) {
+  .bgmControls { padding: 3px 5px; }
+  .bgmVolumeControl input { width: clamp(70px, 18vw, 120px); }
+  .memoNotesGrid { gap: 8px; }
+  .memoNotesGrid .memoNoteField { min-height: 130px; }
+  .memoConditionsSection .memoNotesGrid .memoNoteField textarea { min-height: 95px; height: auto; flex: initial; }
+}
+
+
+/* Smartphone UI: switch between the game board and the private deduction memo. */
+.mobileGameTabs {
+  display: none;
+}
+.mobileGameTab,
+.mobileGameTabActive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid rgba(222, 207, 161, .25);
+  border-radius: 10px;
+  color: #c9d2c6;
+  background: rgba(255,255,255,.045);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.mobileGameTabActive {
+  color: #282113;
+  border-color: #d9bb69;
+  background: linear-gradient(135deg, #e7d397, #c9a85a);
+  box-shadow: 0 2px 7px rgba(0,0,0,.15);
+}
+.mobileGameTab span,
+.mobileGameTabActive span {
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .pageGame {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+  .pageGame .header {
+    position: relative;
+    height: 54px;
+    min-height: 54px;
+    padding: 0 12px;
+  }
+  .pageGame .mainGame {
+    height: auto;
+    min-height: calc(100dvh - 54px);
+    overflow: visible;
+  }
+  .gameWorkspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-content: start;
+    gap: 0;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+  .mobileGameTabs {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    padding: 9px 10px;
+    border-bottom: 1px solid rgba(255,255,255,.09);
+    background: rgba(17,26,22,.96);
+    backdrop-filter: blur(12px);
+  }
+  .mobilePanelHidden {
+    display: none !important;
+  }
+  .gamePlayPanel {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    align-content: start;
+    gap: 10px;
+    min-height: 0;
+    height: auto;
+    padding: 11px 10px 14px;
+    overflow: visible;
+    border-right: 0;
+  }
+  .boardHeader {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .boardHeaderMeta {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .turnPill,
+  .roomPill {
+    padding: 7px 8px;
+    font-size: 9px;
+  }
+  .boardExit {
+    min-height: 34px;
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  .bgmControls {
+    gap: 7px;
+    padding: 4px 7px;
+  }
+  .bgmToggle {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+    font-size: 12px;
+  }
+  .bgmVolumeControl input {
+    width: clamp(65px, 20vw, 105px);
+    height: 22px;
+  }
+  .compactTurnBanner {
+    gap: 9px;
+    padding: 11px 10px;
+  }
+  .compactTurnCopy strong { font-size: 13px; }
+  .compactTurnCopy span {
+    overflow: visible;
+    white-space: normal;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+  .activeCountCompact { font-size: 9px; }
+  .tableTilesRow {
+    align-items: stretch;
+    gap: 7px;
+  }
+  .handTablePanel,
+  .centerTablePanel {
+    flex: 1 1 0;
+    height: auto;
+    padding: 9px 7px 10px;
+  }
+  .tableSectionTitle {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 8px;
+    white-space: normal;
+  }
+  .tableSectionTitle span { font-size: 7px; }
+  .tableSectionTitle strong {
+    overflow: visible;
+    white-space: normal;
+    font-size: 10px;
+  }
+  .compactHandTiles,
+  .compactHiddenTiles {
+    height: 65px;
+    gap: 4px;
+  }
+  .compactNumberTile strong { font-size: clamp(20px, 7vw, 28px); }
+  .compactNumberTile > span { top: 3px; left: 3px; font-size: 7px; }
+  .compactHiddenTile span { width: 20px; height: 20px; font-size: 12px; }
+  .playersRail {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .playerRailItem {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px 7px;
+  }
+  .playerRailIndex { font-size: 8px; }
+  .playerRailAvatar {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+  .playerRailText { width: 100%; }
+  .playerRailText strong { font-size: 10px; }
+  .playerRailText small { font-size: 9px; }
+  .hostMini { top: 5px; right: 5px; }
+  .exchangePanel {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+  .exchangeContent {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    height: auto;
+    padding: 7px;
+  }
+  .exchangeQuestionCard {
+    min-height: 76px;
+    padding: 10px;
+  }
+  .exchangeQuestionMeta,
+  .exchangeQuestionFooter { font-size: 9px; }
+  .exchangeQuestionText { align-items: flex-start; margin: 8px 0; }
+  .exchangeQuestionText strong { font-size: 12px; }
+  .exchangeAnswers { gap: 5px; }
+  .exchangeAnswer {
+    min-height: 34px;
+    gap: 8px;
+    padding: 6px 8px;
+  }
+  .answerOrder { width: 22px; height: 22px; flex-basis: 22px; font-size: 9px; }
+  .answerPlayer { font-size: 11px; }
+  .exchangeAnswer strong { font-size: 11px; }
+  .exchangeWaiting { min-height: 80px; height: auto; padding: 10px; }
+  .exchangeWaiting strong { font-size: 12px; }
+  .exchangeWaiting small { font-size: 10px; line-height: 1.4; }
+  .questionDock { gap: 8px; }
+  .questionDockHeader { min-height: 36px; }
+  .questionDockHeader strong { font-size: 15px; }
+  .questionDockEyebrow { font-size: 8px; }
+  .questionRemaining { font-size: 9px; }
+  .compactQuestionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(105px, auto);
+    gap: 7px;
+    flex: initial;
+  }
+  .compactQuestionCard {
+    min-height: 105px;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 9px 8px 8px;
+  }
+  .compactQuestionCard > strong {
+    display: block;
+    overflow: visible;
+    flex: 1;
+    font-size: 11px;
+    line-height: 1.45;
+    -webkit-line-clamp: unset;
+  }
+  .compactQuestionTop { font-size: 8px; }
+  .compactQuestionActions { gap: 5px; }
+  .compactAskButton {
+    min-height: 38px;
+    padding: 6px 5px;
+    font-size: 10px;
+    line-height: 1.25;
+  }
+  .spectatorMessage {
+    min-height: 80px;
+    padding: 14px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .boardBottomBar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 3px;
+  }
+  .boardHint,
+  .boardNotice {
+    flex: 1 0 100%;
+    overflow: visible;
+    white-space: normal;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+  .guessActionButton {
+    justify-content: center;
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  .memoPanel {
+    min-height: 0;
+    height: auto;
+    padding: 12px 10px 16px;
+    gap: 10px;
+    overflow: visible;
+    border-top: 0;
+  }
+  .memoHeader { min-height: 38px; padding-bottom: 8px; }
+  .memoBrand strong { font-size: 10px; }
+  .memoBrand small { font-size: 7px; }
+  .memoClear { min-height: 36px; padding: 7px 10px; font-size: 10px; }
+  .memoTitleRow h2 { font-size: 22px; }
+  .memoTitleRow p { font-size: 8px; }
+  .memoSaveState { font-size: 9px; }
+  .memoBody {
+    display: flex;
+    flex: initial;
+    flex-direction: column;
+    gap: 14px;
+    overflow: visible;
+  }
+  .memoBody > .memoSection {
+    display: flex;
+    gap: 8px;
+    flex: initial;
+    min-height: 0;
+    overflow: visible;
+  }
+  .memoSectionHeading { flex-wrap: wrap; gap: 4px 8px; }
+  .memoSectionHeading strong { font-size: 12px; }
+  .memoSectionHeading span { white-space: normal; font-size: 9px; }
+  .memoCandidateRow {
+    grid-template-columns: 24px repeat(10, minmax(0, 1fr));
+    gap: 3px;
+  }
+  .memoTile,
+  .memoTileSpacer { height: clamp(29px, 8vw, 40px); }
+  .memoTile { border-radius: 5px; }
+  .memoTile strong { font-size: clamp(12px, 3.6vw, 17px); }
+  .memoTile small { font-size: 6px; }
+  .crossMark { font-size: 21px; }
+  .memoHandRows { gap: 7px; }
+  .memoHandRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7px;
+    padding: 8px;
+  }
+  .memoHandLabel { flex: initial; gap: 6px; }
+  .memoHandLabel span { width: 20px; height: 20px; flex-basis: 20px; font-size: 9px; }
+  .memoHandLabel strong { font-size: 11px; }
+  .memoSlots { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; }
+  .memoSlot { justify-content: center; gap: 3px; padding: 6px 3px; }
+  .memoSlot > small { font-size: 8px; }
+  .memoSlot select { font-size: 10px; }
+  .memoConditionsSection { overflow: visible; }
+  .memoConditionPlayers { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .memoConditionCard { gap: 7px; padding: 9px; }
+  .memoConditionPlayerTitle span { width: 20px; height: 20px; flex-basis: 20px; font-size: 9px; }
+  .memoConditionPlayerTitle strong { font-size: 11px; }
+  .memoStatsGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
+  .memoStatField { gap: 4px; padding: 6px 5px; }
+  .memoStatField span { font-size: 8px; white-space: normal; line-height: 1.2; }
+  .memoStatField input { font-size: 14px; min-height: 24px; }
+  .memoSumsGrid { gap: 5px; }
+  .memoSumField { padding: 6px 5px; }
+  .memoSumField span { font-size: 8px; }
+  .memoSumField input { font-size: 14px; min-height: 24px; }
+  .memoNotesGrid { grid-template-columns: minmax(0, 1fr); gap: 9px; }
+  .memoNotesGrid .memoNoteField { min-height: 0; }
+  .memoNotesGrid .memoNoteField > span { white-space: normal; font-size: 10px; }
+  .memoConditionsSection .memoNotesGrid .memoNoteField textarea {
+    height: 120px;
+    min-height: 120px;
+    flex: initial;
+    resize: vertical;
+    padding: 9px;
+    font-size: 12px;
+  }
+  .memoFootnote { font-size: 8px; line-height: 1.4; }
+  .memoFooter { min-height: 20px; padding-top: 7px; font-size: 8px; }
+  .guessModalBackdrop { padding: 10px; }
+  .guessModal { max-height: 92dvh; overflow-y: auto; padding: 22px 14px 16px; border-radius: 14px; }
+  .guessModal h2 { font-size: 21px; }
+  .guessGrid { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .guessField select { min-height: 42px; font-size: 14px; }
+  .guessActions { gap: 8px; }
+  .guessActions .secondaryButton,
+  .guessActions .primaryButton { min-height: 44px; font-size: 12px; }
+  .pageGame .footer { display: none; }
+}
+
+@media (max-width: 380px) {
+  .pageGame .header { padding: 0 9px; }
+  .gamePlayPanel { padding-right: 7px; padding-left: 7px; }
+  .mobileGameTabs { padding-right: 7px; padding-left: 7px; }
+  .tableSectionTitle strong { font-size: 9px; }
+  .compactHandTiles,
+  .compactHiddenTiles { gap: 3px; }
+  .playerRailText strong { font-size: 9px; }
+  .compactQuestionGrid { gap: 5px; }
+  .compactQuestionCard { padding: 7px 6px; }
+  .compactAskButton { font-size: 9px; }
+  .memoPanel { padding-right: 7px; padding-left: 7px; }
+  .memoCandidateRow { grid-template-columns: 21px repeat(10, minmax(0, 1fr)); gap: 2px; }
+  .memoTile,
+  .memoTileSpacer { height: 28px; }
+  .memoTile strong { font-size: 11px; }
+  .memoStatField { padding: 5px 3px; }
+  .memoStatField span { font-size: 7px; }
+}
+
+
+/* Final mobile layout overrides: keep one active panel visible and prevent memo fields from shrinking. */
+@media (max-width: 900px) {
+  .pageGame {
+    min-width: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .pageGame .mainGame {
+    display: block !important;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: calc(100dvh - 54px);
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  .gameWorkspace {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .mobileGameTabs {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 10px;
+  }
+
+  .mobileGameTab,
+  .mobileGameTabActive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .gamePlayPanel {
+    display: grid;
+    grid-template-rows: auto;
+    align-content: start;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .memoPanel {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    box-sizing: border-box;
+    padding: 14px 12px 22px;
+    overflow: visible;
+    border: 0;
+  }
+
+  .memoHeader,
+  .memoTitleRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .memoBrand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .memoBody {
+    display: flex !important;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .memoBody > .memoSection {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .memoSectionHeading {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+    width: 100%;
+  }
+
+  .memoSectionHeading strong { font-size: 13px; line-height: 1.5; }
+  .memoSectionHeading span { font-size: 10px; line-height: 1.5; white-space: normal; }
+
+  .memoCandidateRow {
+    grid-template-columns: 25px repeat(10, minmax(0, 1fr));
+    gap: 3px;
+  }
+
+  .memoTile,
+  .memoTileSpacer { height: clamp(30px, 8vw, 42px); }
+  .memoTile strong { font-size: clamp(12px, 4vw, 17px); }
+  .memoTile small { font-size: 7px; }
+
+  .memoHandRow {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .memoHandLabel { display: flex; flex-direction: row; align-items: center; gap: 8px; }
+  .memoSlots { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; width: 100%; }
+  .memoSlot { min-width: 0; padding: 7px 4px; }
+  .memoSlot > small { font-size: 9px; }
+  .memoSlot select { min-width: 0; font-size: 11px; }
+
+  .memoConditionPlayers { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .memoConditionCard { gap: 9px; padding: 11px; }
+  .memoConditionPlayerTitle { display: flex; flex-direction: row; align-items: center; gap: 8px; }
+  .memoConditionPlayerTitle strong { font-size: 12px; }
+  .memoStatsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .memoStatField { gap: 5px; padding: 8px; }
+  .memoStatField span { overflow: visible; font-size: 11px; line-height: 1.35; white-space: normal; text-overflow: clip; }
+  .memoStatField input { min-height: 30px; font-size: 16px; }
+  .memoSumsGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .memoSumField { padding: 8px 6px; gap: 5px; }
+  .memoSumField span { overflow: visible; font-size: 10px; line-height: 1.35; white-space: normal; text-overflow: clip; }
+  .memoSumField input { min-height: 30px; font-size: 16px; }
+
+  .memoNotesGrid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .memoNotesGrid .memoNoteField { display: flex; flex-direction: column; gap: 7px; min-height: 0; overflow: visible; }
+  .memoNotesGrid .memoNoteField > span { overflow: visible; font-size: 11px; white-space: normal; text-overflow: clip; }
+  .memoConditionsSection .memoNotesGrid .memoNoteField textarea {
+    display: block;
+    width: 100%;
+    height: 160px;
+    min-height: 160px;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+  }
+
+  .memoFootnote { font-size: 10px; line-height: 1.5; }
+  .memoFooter { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; gap: 6px; min-height: 22px; padding-top: 8px; font-size: 9px; }
+}
+
+@media (max-width: 380px) {
+  .memoPanel { padding-right: 8px; padding-left: 8px; }
+  .memoCandidateRow { grid-template-columns: 21px repeat(10, minmax(0, 1fr)); gap: 2px; }
+  .memoTile,
+  .memoTileSpacer { height: 28px; }
+  .memoTile strong { font-size: 11px; }
+  .memoStatsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .memoSumsGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Sequence-prediction tiles: only the number field is editable; tapping the tile edge cycles R/B/Y/white. */
+.memoPanel .memoSlotTile,
+.memoPanel .memoSlotTile:hover,
+.memoPanel .memoSlotTile.tileRed,
+.memoPanel .memoSlotTile.tileBlue,
+.memoPanel .memoSlotTile.tileYellow {
+  transform: none !important;
+  rotate: none !important;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.memoPanel .memoSlotTile {
+  box-sizing: border-box;
+  min-height: 49px;
+  padding: 3px 2px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+.memoPanel .memoSlotTile > small {
+  font-size: 7px;
+  line-height: 1;
+}
+.memoPanel .memoSlotTile > input {
+  box-sizing: border-box;
+  display: block;
+  width: calc(100% - 8px);
+  min-width: 0;
+  margin: 0 4px;
+  padding: 2px 0;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  color: inherit;
+  background: rgba(255,255,255,.42);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  cursor: text;
+  appearance: textfield;
+}
+.memoPanel .memoSlotTile > input:focus {
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 0 0 1px rgba(36,68,48,.35);
+}
+.memoPanel .memoSlotTile > input::-webkit-outer-spin-button,
+.memoPanel .memoSlotTile > input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+.memoPanel .memoSlotWhite {
+  color: #364638;
+  border-color: #d9d9cc;
+  background: #fffdf5;
+}
+
+/* Strong reset: candidate tiles must never inherit the tilted decorative hero-tile transforms. */
+.memoPanel .memoTile,
+.memoPanel .memoTile:hover,
+.memoPanel .memoTile.tileRed,
+.memoPanel .memoTile.tileBlue,
+.memoPanel .memoTile.tileYellow {
+  transform: none !important;
+  rotate: none !important;
+}
+
+.mobileTabUpdate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-height: 19px;
+  margin-left: 2px;
+  padding: 1px 6px;
+  border: 1px solid rgba(255, 227, 220, .6);
+  border-radius: 999px;
+  color: #fff8f5;
+  background: #b94336;
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  box-shadow: 0 0 0 2px rgba(185, 67, 54, .16);
+}
+
+@media (max-width: 900px) {
+  .memoPanel .memoSlotTile { min-height: 58px; }
+  .memoPanel .memoSlotTile > input { font-size: 16px; }
+  .mobileTabUpdate { min-height: 20px; font-size: 10px; }
+}
+
+.memoPanel .memoColorLabel,
+.memoPanel .memoColorLabel.tileRed,
+.memoPanel .memoColorLabel.tileBlue,
+.memoPanel .memoColorLabel.tileYellow {
+  transform: none !important;
+  rotate: none !important;
+}
+
+
+/* Lobby turn-order controls. The first row is the first player to take a turn. */
+.orderControls {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 4px;
+  margin-left: 2px;
+}
+
+.orderButton {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #cfd8ce;
+  border-radius: 7px;
+  background: #fffdf7;
+  color: #24513e;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.orderButton:hover:not(:disabled) {
+  border-color: #7c9d82;
+  background: #edf5e9;
+}
+
+.orderButton:disabled {
+  opacity: .32;
+  cursor: default;
+}
+
+.orderHint {
+  margin: 10px 0 0;
+  color: #657469;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .playerItem {
+    flex-wrap: wrap;
+    gap: 7px 9px;
+  }
+
+  .playerName {
+    flex: 1 1 110px;
+  }
+
+  .orderControls {
+    margin-left: auto;
+  }
+
+  .orderButton {
+    width: 36px;
+    height: 36px;
+    font-size: 17px;
+  }
+
+  .orderHint {
+    font-size: 12px;
+  }
+}
